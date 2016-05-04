@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0FC9431CDA90E50040535E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7D0FC9411CDA90E50040535E /* LICENSE */; };
+		7D0FC9441CDA90E50040535E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7D0FC9421CDA90E50040535E /* README.md */; };
 		7D23F3F21CD9816500226202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23F3F11CD9816500226202 /* AppDelegate.swift */; };
 		7D23F3F71CD9816500226202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D23F3F51CD9816500226202 /* Main.storyboard */; };
 		7D23F3F91CD9816500226202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D23F3F81CD9816500226202 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D0FC9411CDA90E50040535E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7D0FC9421CDA90E50040535E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D23F3EE1CD9816500226202 /* ExternalScreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExternalScreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D23F3F11CD9816500226202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D23F3F61CD9816500226202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		7D23F3E51CD9816500226202 = {
 			isa = PBXGroup;
 			children = (
+				7D0FC9411CDA90E50040535E /* LICENSE */,
+				7D0FC9421CDA90E50040535E /* README.md */,
 				7D23F3F01CD9816500226202 /* ExternalScreenDemo */,
 				7D23F3EF1CD9816500226202 /* Products */,
 			);
@@ -127,6 +133,7 @@
 			files = (
 				7D23F3FC1CD9816500226202 /* LaunchScreen.storyboard in Resources */,
 				7D23F3F91CD9816500226202 /* Assets.xcassets in Resources */,
+				7D0FC9431CDA90E50040535E /* LICENSE in Resources */,
 				7D23F3F71CD9816500226202 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				7DE96B631CDA51880042B1ED /* ExternalScreenViewController.swift in Sources */,
 				7D23F3F21CD9816500226202 /* AppDelegate.swift in Sources */,
+				7D0FC9441CDA90E50040535E /* README.md in Sources */,
 				7DE96B611CDA495D0042B1ED /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
