@@ -1,5 +1,5 @@
 # ExternalScreenDemo
-This is the companion iOS application to the blog article: TODO.
+This is the companion iOS application to the blog article: [How To Display Custom Content On A External Screen From A iOS Device](http://www.spazstik-software.com/blog/article/how-to-display-custom-content-on-a-external-screen-from-a-ios-device).
 
 This example shows how to enable a external screen for the purpose of displaying custom content.
 
