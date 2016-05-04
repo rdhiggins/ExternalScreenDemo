@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		7D23F3F21CD9816500226202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23F3F11CD9816500226202 /* AppDelegate.swift */; };
-		7D23F3F41CD9816500226202 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23F3F31CD9816500226202 /* ViewController.swift */; };
 		7D23F3F71CD9816500226202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D23F3F51CD9816500226202 /* Main.storyboard */; };
 		7D23F3F91CD9816500226202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D23F3F81CD9816500226202 /* Assets.xcassets */; };
 		7D23F3FC1CD9816500226202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D23F3FA1CD9816500226202 /* LaunchScreen.storyboard */; };
+		7DE96B611CDA495D0042B1ED /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE96B601CDA495D0042B1ED /* MainScreenViewController.swift */; };
+		7DE96B631CDA51880042B1ED /* ExternalScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE96B621CDA51880042B1ED /* ExternalScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D23F3EE1CD9816500226202 /* ExternalScreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExternalScreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D23F3F11CD9816500226202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D23F3F31CD9816500226202 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7D23F3F61CD9816500226202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D23F3F81CD9816500226202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D23F3FB1CD9816500226202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D23F3FD1CD9816500226202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DE96B601CDA495D0042B1ED /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		7DE96B621CDA51880042B1ED /* ExternalScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				7D23F3F11CD9816500226202 /* AppDelegate.swift */,
-				7D23F3F31CD9816500226202 /* ViewController.swift */,
 				7D23F3F51CD9816500226202 /* Main.storyboard */,
 				7D23F3F81CD9816500226202 /* Assets.xcassets */,
 				7D23F3FA1CD9816500226202 /* LaunchScreen.storyboard */,
 				7D23F3FD1CD9816500226202 /* Info.plist */,
+				7DE96B601CDA495D0042B1ED /* MainScreenViewController.swift */,
+				7DE96B621CDA51880042B1ED /* ExternalScreenViewController.swift */,
 			);
 			path = ExternalScreenDemo;
 			sourceTree = "<group>";
@@ -135,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D23F3F41CD9816500226202 /* ViewController.swift in Sources */,
+				7DE96B631CDA51880042B1ED /* ExternalScreenViewController.swift in Sources */,
 				7D23F3F21CD9816500226202 /* AppDelegate.swift in Sources */,
+				7DE96B611CDA495D0042B1ED /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +292,7 @@
 				7D23F4021CD9816500226202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
