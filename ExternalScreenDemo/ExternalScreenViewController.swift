@@ -11,7 +11,7 @@ import WebKit
 
 class ExternalScreenViewController: UIViewController {
     
-    private var webView: WKWebView?
+    fileprivate var webView: WKWebView?
     
     override func loadView() {
         webView = WKWebView()
@@ -21,10 +21,10 @@ class ExternalScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let url = NSURL(string: "http://www.spazstik-software.com") {
-            let req = NSURLRequest(URL: url)
+        if let url = URL(string: "http://www.spazstik-software.com") {
+            let req = URLRequest(url: url)
             
-            webView?.loadRequest(req)
+            _ = webView?.load(req)
         }
     }
 

@@ -39,11 +39,11 @@ class MainScreenViewController: UIViewController {
     
     /// Property used to store a reference to the external window object
     /// when active
-    private var externalWindow: UIWindow?
+    fileprivate var externalWindow: UIWindow?
     
     deinit {
         // Cleanup notifications
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     /// Overrided loadView method that is used to use a WKWebView
@@ -59,15 +59,15 @@ class MainScreenViewController: UIViewController {
         setupScreenNotifications()
         
         // Load the WKWebView with something to show
-        if let url = NSURL(string: "http://www.spazstik-software.com") {
-            let req = NSURLRequest(URL: url)
+        if let url = URL(string: "http://www.spazstik-software.com") {
+            let req = URLRequest(url: url)
             
-            webView?.loadRequest(req)
+            _ = webView?.load(req)
         }
         
         // Check to see if there is an external screen already connected
-        if UIScreen.screens().count > 1 {
-            setupExternalScreen(UIScreen.screens()[1])
+        if UIScreen.screens.count > 1 {
+            setupExternalScreen(UIScreen.screens[1])
         }
     }
 
@@ -81,24 +81,24 @@ class MainScreenViewController: UIViewController {
     ///
     /// - parameter screen: A UIScreen object to connect the 
     /// ExternalScreenViewController too
-    private func setupExternalScreen(screen: UIScreen) {
+    fileprivate func setupExternalScreen(_ screen: UIScreen) {
         guard externalWindow == nil,
-            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ExternalScreen") as? ExternalScreenViewController else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ExternalScreen") as? ExternalScreenViewController else {
                 return
         }
         
         externalWindow = UIWindow(frame: screen.bounds)
         externalWindow!.rootViewController = vc
         externalWindow!.screen = screen
-        externalWindow!.hidden = false
+        externalWindow!.isHidden = false
     }
     
     /// A private method used to teardown the external UIWindow object
     /// used to display the content on the external screen
-    private func teardownExternalScreen() {
+    fileprivate func teardownExternalScreen() {
         guard let ew = externalWindow else { return }
         
-        ew.hidden = true
+        ew.isHidden = true
         externalWindow = nil
     }
     
@@ -106,7 +106,7 @@ class MainScreenViewController: UIViewController {
     ///
     /// - parameter notification: A NSNotification object that informs us about
     /// the UIScreen instance that has just become active
-    func externalScreenDidConnect(notification: NSNotification) {
+    func externalScreenDidConnect(_ notification: Notification) {
         guard let screen = notification.object as? UIScreen else {
             return
         }
@@ -119,7 +119,7 @@ class MainScreenViewController: UIViewController {
     ///
     /// - parameter notification: A NSNotification object that informs us about
     /// the UIScreen instance that has just disconnected
-    func externalScreenDidDisconnect(notification: NSNotification) {
+    func externalScreenDidDisconnect(_ notification: Notification) {
         guard let _ = notification.object as? UIScreen else {
             return
         }
@@ -129,10 +129,10 @@ class MainScreenViewController: UIViewController {
     
     /// Method used to register the notification handlers for external
     /// screen connects/disconnects
-    private func setupScreenNotifications() {
-        let center = NSNotificationCenter.defaultCenter()
+    fileprivate func setupScreenNotifications() {
+        let center = NotificationCenter.default
 
-        center.addObserver(self, selector: #selector(MainScreenViewController.externalScreenDidConnect(_:)), name: UIScreenDidConnectNotification, object: nil)
-        center.addObserver(self, selector: #selector(MainScreenViewController.externalScreenDidDisconnect(_:)), name: UIScreenDidDisconnectNotification, object: nil)
+        center.addObserver(self, selector: #selector(MainScreenViewController.externalScreenDidConnect(_:)), name: NSNotification.Name.UIScreenDidConnect, object: nil)
+        center.addObserver(self, selector: #selector(MainScreenViewController.externalScreenDidDisconnect(_:)), name: NSNotification.Name.UIScreenDidDisconnect, object: nil)
     }
 }
